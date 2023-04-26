@@ -3,6 +3,7 @@ this is the first
 python based webased programming 
 thuis is my sample personal website
 """
+from flask import Flask, render_template, jsonify
 JOBS = [
   {
     "id": 1,
@@ -23,14 +24,20 @@ JOBS = [
     "salary": "$27,000"
   }
 ]
-from flask import Flask, render_template
+
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def hello_world():
-  return render_template('home.html', jobs = JOBS)
+  return render_template('home.html',
+                         jobs = JOBS,
+                        company_name = 'Jovian')
+
+@app.route("/api/jobs")
+def jobs_list():
+  return jsonify(JOBS)
 
 if __name__ == '__main__':
   app.run(host='0.0.0.0', debug = True)
