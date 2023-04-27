@@ -22,21 +22,20 @@
   
     <h2 style ="color:rgb(180,189,180)" class = "text-left mt-5 mb-2">About High-Tech IT Solutions</h2>
     <p class = "lead">
-IT solutions are integrated into a businesses’ processes for a number of reasons, including in an effort to make business operations more seamless, improve productivity, achieve greater ROI, deliver better customer experiences, improve team collaboration and to automate specific tasks.
-
-      <div>
-      </p>
-        <h2 class = "text-left mt-5">
-          High Technology Educational Website  
-        </h2>
-        <div class ="mb-4 mt-4">
-          {% for job in jobs %}
-          {% include 'jobitem.html' %}
-          {% endfor %}
-        </div>
+<H1>About My Project </H1>
+      
+    <div>
+    </p>
+    <h2 class = "text-left mt-5">High Technology Educational Website  </h2>
+      <div class ="mb-4 mt-4">
+        {% for job in jobs %}
+        {% include 'jobitem.html' %}
+        {% endfor %}
       </div>
-  
-    {%include "footer.html" %}
-    
+    </div>
+    <div class="container text-center">
+      <button class = "btn btn-primary btn-lg btn-cn">Contact Us</button>
+    </div>
+      {% include 'footer.html'%}
   </body>
 </html>
